@@ -1,59 +1,51 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Sirius - 학교 정보를 한눈에. </title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className="text-2xl font-bold">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main>
+        <div className="px-5 py-7">
+          <h1 className="text-5xl font-bold">Sirius</h1>
+          <h2 className="text-3xl text-gray-700 font-medium">
+            학교 정보를 한눈에.
+          </h2>
+        </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className="m-6 p-3 flex items-center justify-center space-x-4 text-left absolute right-0 top-0 border border-gray-200 rounded-lg bg-gray-100">
+          <img
+            src="https://ghavatars.staticblitz.com/injoon5.png?size=160"
+            alt=""
+            class="w-14 h-14 rounded-full"
+            loading="lazy"
+          />
+          <div>
+            <h1 className="text-2xl font-bold">오인준</h1>
+            <h1 className="text-xl font-semibold text-gray-600">
+              이대부속초등학교
+            </h1>
+          </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+          <Link
+            className="text-semibold"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            passHref
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            <a className="pointer-events-auto">설정</a>
+          </Link>
+          <Link
+            className="text-semibold"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            passHref
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <a className="pointer-events-auto">로그아웃</a>
+          </Link>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="https://next.new" target="_blank" rel="noopener noreferrer">
-          Created with&nbsp;<b>next.new</b>&nbsp;⚡️
-        </a>
-      </footer>
     </div>
   );
 }
